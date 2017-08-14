@@ -101,19 +101,80 @@ The difference between the original data set and the augmented data set is the f
 
 ## 5. Model Architeture 
 
-My final model consisted of the following layers:
+Structure of Weights, Biases and HyperParameters
 
-| Layer         		|     Description	        					| 
+mu = 0
+    sigma = 0.1
+    
+    strides={'str1': [1,1,1,1],
+             'str2': [1,2,2,1]}
+    
+    
+    maxpool_filter=[1,2,2,1]
+        
+                   
+
+    weights={
+            'wl1':tf.Variable(tf.truncated_normal(shape=(5, 5, 1, 32), mean = mu, stddev = sigma)),
+            'wl2':tf.Variable(tf.truncated_normal(shape=(5, 5, 32, 128), mean = mu, stddev = sigma)),
+            'wl2_a':tf.Variable(tf.truncated_normal(shape=(5, 5, 128, 800), mean = mu, stddev = sigma)),
+            'wl3':tf.Variable(tf.truncated_normal(shape=(800, 420), mean = mu, stddev = sigma)),
+            'wl4':tf.Variable(tf.truncated_normal(shape=(420, 200), mean = mu, stddev = sigma)),
+            'wl5':tf.Variable(tf.truncated_normal(shape=(200, 43), mean = mu, stddev = sigma))}
+    
+    biases={
+            'bl1':tf.Variable(tf.zeros(32)),
+            'bl2':tf.Variable(tf.zeros(128)),
+            'bl2_a':tf.Variable(tf.zeros(800)),
+            'bl3':tf.Variable(tf.zeros(420)),
+            'bl4':tf.Variable(tf.zeros(200)),
+            'bl5':tf.Variable(tf.zeros(43))}
+
+
+6 Layers Model 
+
+| Layer 1         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 32x32x1 GrayScaled image   							| 
+| Convolution 5x5     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
+
+
+| Layer 2        		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 32x32x1 GrayScaled image   							| 
+| Convolution 5x5     	| 2x2 stride, same padding, outputs 32x32x64 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
+
+
+| Layer 2_a         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 GrayScaled image   							| 
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+
+| Layer 3         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 32x32x1 GrayScaled image   							| 
+| Fully Connected     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| RELU					|												|
+
+| Layer 4         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 32x32x1 GrayScaled image   							| 
+| Fully Connected     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| RELU					|												|
+
+| Layer 5         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 32x32x1 GrayScaled image   							| 
+| Fully Connected     	| 1x1 stride, same padding, outputs 32x32x64 	|
+
+
+
+
  
 
 
