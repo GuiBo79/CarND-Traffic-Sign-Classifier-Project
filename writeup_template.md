@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./datasethist.png "DataSet Distribution"
 [image2]: ./index.png "Original DataSet"
-[image3]: ./examples/random_noise.jpg "Random Noise"
+[image3]: ./preprocessed.jpg "Grayscaled and Normalized DataSet"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
@@ -89,23 +89,10 @@ Below the Bar Graphics, was plotted the first sample of each label without any p
 
 
 
-###Design and Test a Model Architecture
+## 4.Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+To pre-process the DataSet, the first step was to grayscale using cv2.cvtColor funtion followed by a normalization. For the model I got better result just divinding the image array by 255 than using (x-128)/128 technique. I tried others tools as cv2.normalize , but as before mentioned, no improvement was verifyed. 
 
-As a first step, I decided to convert the images to grayscale because ...
-
-Here is an example of a traffic sign image before and after grayscaling.
-
-
-
-As a last step, I normalized the image data because ...
-
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
 
 ![alt text][image3]
 
