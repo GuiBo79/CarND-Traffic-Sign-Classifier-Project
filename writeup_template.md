@@ -28,17 +28,34 @@ The goals / steps of this project are the following:
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
-## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+## Rubric Points 
+1.Required files:
+  For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, this Report  in MD format , as well a link to GitHub where will be included all files related to the project.
+  
+2.DataSet exploration:
+ To sumarize the data was used Numpy library, with the folowing results for each aspect of the data set.
+ * The size of training set is ?
+   n_train = len(X_train)
+ * The size of the validation set is ?
+   n_validation = len(X_valid)
+ * The size of test set is ?
+   n_test = len(X_test)
+ * The shape of a traffic sign image is ?
+   image_shape = X_train.shape[1:]
+ * The number of unique classes/labels in the data set is ?
+   n_classes = len(np.unique(y_valid))
+   
+ The notebook output returned as follow:
+ 
+ >>Number of training examples = 34799
+   Number of validation examples = 4410
+   Number of testing examples = 12630
+   Image data shape = (32, 32, 3)
+   Number of classes = 43
+ 
+  
 
----
-###Writeup / README
-
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
-
-###Data Set Summary & Exploration
+-###Data Set Summary & Exploration
 
 ####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
