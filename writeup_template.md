@@ -1,8 +1,8 @@
-#**Traffic Sign Recognition** 
+**Traffic Sign Recognition** 
 
-##Writeup Template
+Implementation Report 
 
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+This report describes all the steps and techniques used to load and  pre-processing an dataset of the German Traffic Signs, to train and evalutate a ConvNet to predict and reconize the signs labels.
 
 ---
 
