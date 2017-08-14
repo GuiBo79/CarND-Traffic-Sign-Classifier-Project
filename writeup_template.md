@@ -2,9 +2,13 @@
 
 Implementation Report 
 
-This report describes all the steps and techniques used to load and  pre-processing an dataset of the German Traffic Signs, to train and evalutate a ConvNet to predict and reconize the signs labels.
+This report describes all the steps and techniques used to load and  pre-processing an dataset of the German Traffic Signs, to train and evalutate a ConvNet to predict and reconize the signs labels. Below is describes the ahrdware as well the enrironment used in the project.
 
----
+Processor:Intel® Core™ i5-5200U CPU @ 2.20GHz × 4 
+Graphics: GeForce 930M/PCIe/SSE2
+OS: Linux Ubuntu 17.04 64 bits
+Environment: Anaconda 3 / TensorFlow-GPU / CUDA Toolkit 8.0 
+
 
 # Build a Traffic Sign Recognition Project 
 
@@ -34,7 +38,7 @@ The goals / steps of this project are the following:
 
   For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, this Report  in MD format , as well a link to GitHub where will be included all files related to the project.
   
-** 2.DataSet summarizing: **
+## 2.DataSet summarizing: 
 
  To sumarize the data was used Numpy library, with the folowing results for each aspect of the data set.
  * The size of training set is ?
@@ -58,7 +62,7 @@ The goals / steps of this project are the following:
  
   
 
-** 3.DataSet Exploration **
+## 3.DataSet Exploration 
 
 
 ####2. Include an exploratory visualization of the dataset.
@@ -66,6 +70,8 @@ The goals / steps of this project are the following:
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
 ![alt text][image1]
+
+
 
 ###Design and Test a Model Architecture
 
