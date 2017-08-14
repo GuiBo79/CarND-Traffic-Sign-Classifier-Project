@@ -30,7 +30,7 @@ The goals / steps of this project are the following:
 
 # Rubric Points 
 
-** 1.Required files: **
+## 1.Required files: 
 
   For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, this Report  in MD format , as well a link to GitHub where will be included all files related to the project.
   
