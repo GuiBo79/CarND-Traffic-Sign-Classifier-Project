@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./datasethist.png "DataSet Distribution"
-[image2]: ./originaldataset.png "Original DataSet"
+[image2]: ./index.png "Original DataSet"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
