@@ -1,4 +1,4 @@
-**Traffic Sign Recognition** 
+# Traffic Sign Recognition 
 
 Implementation Report 
 
@@ -6,7 +6,7 @@ This report describes all the steps and techniques used to load and  pre-process
 
 ---
 
-**Build a Traffic Sign Recognition Project**
+# Build a Traffic Sign Recognition Project 
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -28,12 +28,14 @@ The goals / steps of this project are the following:
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
-** Rubric Points 
+# Rubric Points 
 
-# 1.Required files:
+** 1.Required files:
+
   For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, this Report  in MD format , as well a link to GitHub where will be included all files related to the project.
   
-# 2.DataSet exploration:
+** 2.DataSet exploration:
+
  To sumarize the data was used Numpy library, with the folowing results for each aspect of the data set.
  * The size of training set is ?
    n_train = len(X_train)
@@ -56,7 +58,7 @@ The goals / steps of this project are the following:
  
   
 
-# 3.DataSet Exploration
+** 3.DataSet Exploration
 
 
 ####2. Include an exploratory visualization of the dataset.
