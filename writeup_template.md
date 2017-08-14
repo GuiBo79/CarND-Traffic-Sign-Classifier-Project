@@ -5,8 +5,11 @@ Implementation Report
 This report describes all the steps and techniques used to load and  pre-processing an dataset of the German Traffic Signs, to train and evalutate a ConvNet to predict and reconize the signs labels. Below is describes the ahrdware as well the enrironment used in the project.
 
 Processor:Intel® Core™ i5-5200U CPU @ 2.20GHz × 4 
+
 Graphics: GeForce 930M/PCIe/SSE2
+
 OS: Linux Ubuntu 17.04 64 bits
+
 Environment: Anaconda 3 / TensorFlow-GPU / CUDA Toolkit 8.0 
 
 
@@ -23,7 +26,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
+[image1]: ./datasethist.png "DataSet Distribution"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
