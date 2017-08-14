@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./datasethist.png "DataSet Distribution"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
+[image2]: ./originaldataset.png "Original DataSet"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
@@ -72,11 +72,20 @@ The goals / steps of this project are the following:
 ## 3.DataSet Exploration 
 
 
-####2. Include an exploratory visualization of the dataset.
-
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+The graph shows the dataset distribution, where is possible to see how variant is. This variation affect directly the model accuracy, and show how import is the pre-processing step.
+Red - Training DataSet
+Blue - Test DataSet
+Green - Validation DataSet
 
 ![alt text][image1]
+
+Below the Bar Graphics, was plotted the first sample of each label without any pre-processing method, just the original DataSet.
+
+![alt text][image2]
+
+
+
+
 
 
 
