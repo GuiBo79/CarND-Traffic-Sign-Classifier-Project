@@ -28,11 +28,12 @@ The goals / steps of this project are the following:
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
-## Rubric Points 
-1.Required files:
+** Rubric Points 
+
+# 1.Required files:
   For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, this Report  in MD format , as well a link to GitHub where will be included all files related to the project.
   
-2.DataSet exploration:
+# 2.DataSet exploration:
  To sumarize the data was used Numpy library, with the folowing results for each aspect of the data set.
  * The size of training set is ?
    n_train = len(X_train)
@@ -47,26 +48,16 @@ The goals / steps of this project are the following:
    
  The notebook output returned as follow:
  
- >>Number of training examples = 34799
-   Number of validation examples = 4410
-   Number of testing examples = 12630
-   Image data shape = (32, 32, 3)
-   Number of classes = 43
+ >>  Number of training examples = 34799
+ >>  Number of validation examples = 4410
+ >>  Number of testing examples = 12630
+ >>  Image data shape = (32, 32, 3)
+ >>  Number of classes = 43
  
   
 
--###Data Set Summary & Exploration
+# 3.DataSet Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
-
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
-
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
 
 ####2. Include an exploratory visualization of the dataset.
 
