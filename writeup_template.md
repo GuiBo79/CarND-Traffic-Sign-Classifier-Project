@@ -73,7 +73,7 @@ The goals / steps of this project are the following:
 ## 3.DataSet Exploration 
 
 
-The graph shows the dataset distribution, where is possible to see how variant is. This variation affect directly the model accuracy, and show how import is the pre-processing step.
+The graph shows the dataset distribution, where is possible to see how variant is. This variation affect directly the model accuracy, and show how important is the pre-processing step.
 Red - Training DataSet
 Blue - Test DataSet
 Green - Validation DataSet
@@ -92,7 +92,7 @@ Below the Bar Graphics, was plotted the first sample of each label without any p
 
 ## 4.Design and Test a Model Architecture
 
-To pre-process the DataSet, the first step was to grayscale using cv2.cvtColor funtion followed by a normalization. For the model I got better result just divinding the image array by 255 than using (x-128)/128 technique. I tried others tools as cv2.normalize , but as before mentioned, no improvement was verifyed. 
+To pre-process the DataSet, the first step was to grayscale using cv2.cvtColor function followed by a normalization. For the model I got better result just divinding the image array by 255 than using (x-128)/128 technique. I tried others tools as cv2.normalize , but as before mentioned, no improvement was verifyed. 
 
 The Validation dataset was augmented just concatenating the dataset itself, followed by a code (enhance_fig funtion) who randomly rotate and modify the sharpness of all dataset.
 
@@ -192,15 +192,16 @@ Optimizer: AdamOptimizer
 The model was trained using these hyperparamter:
   Learning Rate=0.00097
   EPOCHS=30
-  Batch=128
-In the beggining I was just doing trial and error to understand how the hyperparameters, as well the architeture and depth of the NetWork were influnecing in the performance. The whole time I was looking for a simple code, focused in the NetWork problem. 
+  Batch=156
+In the beggining I was just doing trial and error to understand how the hyperparameters, as well the architeture and depth of the NetWork were influencing  the performance. The whole time I was looking for a simple code, focused in the NetWork problem. 
 Since the beggining was clear for me how import is the pre-processing . After lots of changes in the NetWork, a simple change in the normalization technique made my code jumps from 0.70 accuracy to 0.90. 
 
 The first architeture was a Vanilla LetNet. Rest very clear for me how good LeNet can handle with image, but to fit it exatcly to the problem is the challenge. 
 
 Changes and Experiences with LeNet
-  Use of Dropout to prevent overfitting: Doesn't make any difference out of a slower code to run
+  Use of Dropout to prevent overfitting: Doesn't make any difference out of a slower code. 
   Inclusion of an intermediate Conv layer called Layer 2_a to increase the depth of the NetWork: This change improve the accuracy in about 5%
+  
   
 Each test was followed by an evalutation of the NetWotk accuracy related to the three DataSet, always looking for a convergency of the result. Due the difference between the datasets was already expected differents accuracies, but is very interesting how the behavior of the network can change, with a same setup one dataset can converge while another diverge the accuracy.
 
