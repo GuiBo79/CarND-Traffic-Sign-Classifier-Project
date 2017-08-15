@@ -176,6 +176,7 @@ sigma = 0.1
 | RELU					|				output 43
 
 SoftMax Funtion: softmax_cross_entropy_with_logits
+
 Optimizer: AdamOptimizer
 
 
@@ -220,9 +221,13 @@ All the images were downloaded from internet and ajusted to 32 X 32 whith ShotWe
 y_final_labels=np.array([4,32,40,36,35])
 
 4.Speed limit (70km/h)
+
 32.End of all speed and passing limits
+
 40.Roundabout mandatory
+
 36.Go straight or right
+
 35.Ahead only
 
 Here are the results of the prediction:
