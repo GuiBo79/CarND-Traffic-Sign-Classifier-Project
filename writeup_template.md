@@ -220,9 +220,9 @@ All the images were downloaded from internet and ajusted to 32 X 32 whith ShotWe
 
 y_final_labels=np.array([4,32,40,36,35])
 
-4.Speed limit (70km/h)
+14.Stop
 
-32.End of all speed and passing limits
+13.Yield
 
 40.Roundabout mandatory
 
@@ -234,14 +234,14 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Speed limit (70km/h)    		| ???  									| 
-| End of all speed and passing limits     			| ???										|
-| Roundabout mandatory					| ???											|
-| Go straight or right	      		| ???				 				|
-| Ahead only			| ???     							|
+| Stop    		| Stop  									| 
+| Yield     			| Yield								|
+| Roundabout mandatory					| Roundabout mandatory											|
+| Go straight or right	      		| Go straight or right				 				|
+| Ahead only			| Ahead only     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the valid set 96.4%
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
