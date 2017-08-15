@@ -101,8 +101,11 @@ To pre-process the DataSet, the first step was to grayscale using cv2.cvtColor f
 
 Structure of Weights, Biases and HyperParameters
 
+EPOCHS = 30
+BATCH_SIZE = 150
+dropout=0.75
 mu = 0
-    sigma = 0.1
+sigma = 0.1
     
     strides={'str1': [1,1,1,1],
              'str2': [1,2,2,1]}
@@ -113,20 +116,21 @@ mu = 0
                    
 
     weights={
-            'wl1':tf.Variable(tf.truncated_normal(shape=(5, 5, 1, 32), mean = mu, stddev = sigma)),
+            'wl1':tf.Variable(tf.truncated_normal(shape=(3, 3, 1, 32), mean = mu, stddev = sigma)),
             'wl2':tf.Variable(tf.truncated_normal(shape=(5, 5, 32, 128), mean = mu, stddev = sigma)),
-            'wl2_a':tf.Variable(tf.truncated_normal(shape=(5, 5, 128, 800), mean = mu, stddev = sigma)),
-            'wl3':tf.Variable(tf.truncated_normal(shape=(800, 420), mean = mu, stddev = sigma)),
-            'wl4':tf.Variable(tf.truncated_normal(shape=(420, 200), mean = mu, stddev = sigma)),
-            'wl5':tf.Variable(tf.truncated_normal(shape=(200, 43), mean = mu, stddev = sigma))}
+            'wl2_a':tf.Variable(tf.truncated_normal(shape=(5, 5, 128, 512), mean = mu, stddev = sigma)),
+            'wl3':tf.Variable(tf.truncated_normal(shape=(512, 256), mean = mu, stddev = sigma)),
+            'wl4':tf.Variable(tf.truncated_normal(shape=(256, 128), mean = mu, stddev = sigma)),
+            'wl5':tf.Variable(tf.truncated_normal(shape=(128, 43), mean = mu, stddev = sigma))}
     
     biases={
             'bl1':tf.Variable(tf.zeros(32)),
             'bl2':tf.Variable(tf.zeros(128)),
-            'bl2_a':tf.Variable(tf.zeros(800)),
-            'bl3':tf.Variable(tf.zeros(420)),
-            'bl4':tf.Variable(tf.zeros(200)),
+            'bl2_a':tf.Variable(tf.zeros(512)),
+            'bl3':tf.Variable(tf.zeros(256)),
+            'bl4':tf.Variable(tf.zeros(128)),
             'bl5':tf.Variable(tf.zeros(43))}
+
 
 
 6 Layers Model 
@@ -134,43 +138,45 @@ mu = 0
 | Layer 1         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 GrayScaled image   							| 
-| Convolution 5x5     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Convolution 3x3     	| 1x1 stride, same padding	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
+| Max pooling	      	| 2x2 stride,  outputs 15x15x32 				|
 
 
 | Layer 2        		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 GrayScaled image   							| 
-| Convolution 5x5     	| 2x2 stride, same padding, outputs 32x32x64 	|
+| Input         		| 15x15x32 GrayScaled image   							| 
+| Convolution 5x5     	| 2x2 stride, same padding	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x128 				|
 
 
 | Layer 2_a         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 GrayScaled image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
+| Input         		| 5x5x128  							| 
+| Convolution 5x5     	| 1x1 stride, same padding 	|
+| RELU					|		output 512										|
 
 | Layer 3         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 GrayScaled image   							| 
-| Fully Connected     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
+| Input         		| 512  							| 
+| Fully Connected     	| 	|
+| RELU					|				output 256								|
 
 | Layer 4         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 GrayScaled image   							| 
-| Fully Connected     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
+| Input         		| 256  							| 
+| Fully Connected     	|  	|
+| RELU					|				output 128								|
 
 | Layer 5         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 GrayScaled image   							| 
-| Fully Connected     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Input         		| 128   							| 
+| Fully Connected     	|  	|
+| RELU					|				output 43
 
-
+SoftMax Funtion: softmax_cross_entropy_with_logits
+Optimizer: AdamOptimizer
 
 
  
