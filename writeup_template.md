@@ -2,7 +2,7 @@
 
 Implementation Report 
 
-This report describes all the steps and techniques used to load and  pre-processing an dataset of the German Traffic Signs, to train and evalutate a ConvNet to predict and reconize the signs labels. Below is describes the ahrdware as well the enrironment used in the project.
+This report describes all the steps and techniques used to load and  pre-processing an dataset of the German Traffic Signs, to train and evalutate a ConvNet to predict and reconize the signs labels. Below is described the hardware as well the environment used in the project.
 
 Processor:Intel® Core™ i5-5200U CPU @ 2.20GHz × 4 
 
@@ -40,7 +40,7 @@ The goals / steps of this project are the following:
 
 ## 1.Required files: 
 
-  For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, thiimg2s Report  in MD format , as well a link to GitHub where will be included all files related to the project.
+  For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, this Report  in MD format , as well a link to GitHub where will be included all files related to the project.
   
 ## 2.DataSet summarizing: 
 
@@ -94,6 +94,8 @@ Below the Bar Graphics, was plotted the first sample of each label without any p
 
 To pre-process the DataSet, the first step was to grayscale using cv2.cvtColor funtion followed by a normalization. For the model I got better result just divinding the image array by 255 than using (x-128)/128 technique. I tried others tools as cv2.normalize , but as before mentioned, no improvement was verifyed. 
 
+The Validation dataset was augmented just concatenating the dataset itself, followed by a code (enhance_fig funtion) who randomly rotate and modify the sharpness of all dataset.
+
 
 ![alt text][image3]
 
@@ -103,7 +105,7 @@ To pre-process the DataSet, the first step was to grayscale using cv2.cvtColor f
 Structure of Weights, Biases and HyperParameters
 
 EPOCHS = 30
-BATCH_SIZE = 150
+BATCH_SIZE = 156
 dropout=0.75
 mu = 0
 sigma = 0.1
@@ -117,20 +119,21 @@ sigma = 0.1
                    
 
     weights={
-            'wl1':tf.Variable(tf.truncated_normal(shape=(3, 3, 1, 32), mean = mu, stddev = sigma)),
-            'wl2':tf.Variable(tf.truncated_normal(shape=(5, 5, 32, 128), mean = mu, stddev = sigma)),
-            'wl2_a':tf.Variable(tf.truncated_normal(shape=(5, 5, 128, 512), mean = mu, stddev = sigma)),
-            'wl3':tf.Variable(tf.truncated_normal(shape=(512, 256), mean = mu, stddev = sigma)),
-            'wl4':tf.Variable(tf.truncated_normal(shape=(256, 128), mean = mu, stddev = sigma)),
-            'wl5':tf.Variable(tf.truncated_normal(shape=(128, 43), mean = mu, stddev = sigma))}
+            'wl1':tf.Variable(tf.truncated_normal(shape=(5, 5, 1, 32), mean = mu, stddev = sigma)),
+            'wl2':tf.Variable(tf.truncated_normal(shape=(5, 5, 32, 64), mean = mu, stddev = sigma)),
+            'wl2_a':tf.Variable(tf.truncated_normal(shape=(5, 5, 64, 400), mean = mu, stddev = sigma)),
+            'wl3':tf.Variable(tf.truncated_normal(shape=(400, 200), mean = mu, stddev = sigma)),
+            'wl4':tf.Variable(tf.truncated_normal(shape=(200, 100), mean = mu, stddev = sigma)),
+            'wl5':tf.Variable(tf.truncated_normal(shape=(100, 43), mean = mu, stddev = sigma))}
     
     biases={
             'bl1':tf.Variable(tf.zeros(32)),
-            'bl2':tf.Variable(tf.zeros(128)),
-            'bl2_a':tf.Variable(tf.zeros(512)),
-            'bl3':tf.Variable(tf.zeros(256)),
-            'bl4':tf.Variable(tf.zeros(128)),
+            'bl2':tf.Variable(tf.zeros(64)),
+            'bl2_a':tf.Variable(tf.zeros(400)),
+            'bl3':tf.Variable(tf.zeros(200)),
+            'bl4':tf.Variable(tf.zeros(100)),
             'bl5':tf.Variable(tf.zeros(43))}
+
 
 
 
@@ -192,8 +195,6 @@ The model was trained using these hyperparamter:
   Batch=128
 In the beggining I was just doing trial and error to understand how the hyperparameters, as well the architeture and depth of the NetWork were influnecing in the performance. The whole time I was looking for a simple code, focused in the NetWork problem. 
 Since the beggining was clear for me how import is the pre-processing . After lots of changes in the NetWork, a simple change in the normalization technique made my code jumps from 0.70 accuracy to 0.90. 
-
-
 
 The first architeture was a Vanilla LetNet. Rest very clear for me how good LeNet can handle with image, but to fit it exatcly to the problem is the challenge. 
 
