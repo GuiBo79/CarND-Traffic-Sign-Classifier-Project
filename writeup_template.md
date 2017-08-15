@@ -29,17 +29,17 @@ The goals / steps of this project are the following:
 [image1]: ./datasethist.png "DataSet Distribution"
 [image2]: ./index.png "Original DataSet"
 [image3]: ./preprocessed.jpg "Grayscaled and Normalized DataSet"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./img1.png "Traffic Sign 1"
+[image5]: ./img2.png "Traffic Sign 2"
+[image6]: ./img3.png "Traffic Sign 3"
+[image7]: ./img4.png "Traffic Sign 4"
+[image8]: ./img5.png "Traffic Sign 5"
 
 # Rubric Points 
 
 ## 1.Required files: 
 
-  For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, this Report  in MD format , as well a link to GitHub where will be included all files related to the project.
+  For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, thiimg2s Report  in MD format , as well a link to GitHub where will be included all files related to the project.
   
 ## 2.DataSet summarizing: 
 
@@ -180,35 +180,35 @@ mu = 0
 
 ## 6. Model Training 
 
-. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+The model was trained using these hyperparamter:
+  Learning Rate=0.00097
+  EPOCHS=30
+  Batch=128
+In the beggining I was just doing trial and error to understand how the hyperparameters, as well the architeture and depth of the NetWork were influnecing in the performance. The whole time I was looking for a simple code, focused in the NetWork problem. 
+Since the beggining was clear for me how import is the pre-processing . After lots of changes in the NetWork, a simple change in the normalization technique made my code jumps from 0.70 accuracy to 0.90. 
 
-To train the model, I used an ....
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-My final model results were:
+The first architeture was a Vanilla LetNet. Rest very clear for me how good LeNet can handle with image, but to fit it exatcly to the problem is the challenge. 
+
+Changes and Experiences with LeNet
+  Use of Dropout to prevent overfitting: Doesn't make any difference out of a slower code to run
+  Inclusion of an intermediate Conv layer called Layer 2_a to increase the depth of the NetWork: This change improve the accuracy in about 5%
+  
+Each test was followed by an evalutation of the NetWotk accuracy related to the three DataSet, always looking for a convergency of the result. Due the difference between the datasets was already expected differents accuracies, but is very interesting how the behavior of the network can change, with a same setup one dataset can converge while another diverge the accuracy.
+
+
+Final Model Accuracy:
+
 * training set accuracy of ?
 * validation set accuracy of ? 
 * test set accuracy of ?
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+## 7.Test on New Images
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
+All the images were downloaded from internet and ajusted to 32 X 32 whith ShotWell
 
-###Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
-
-Here are five German traffic signs that I found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
