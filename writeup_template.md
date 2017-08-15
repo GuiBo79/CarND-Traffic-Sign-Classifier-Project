@@ -141,41 +141,41 @@ sigma = 0.1
 
 | Layer 1         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 GrayScaled image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding	|
+| Input         		| 32x32x1 GrayScaled image   	| 
+| Convolution 3x3     	| 1x1 stride, VALID padding	| output 28X28X32
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 15x15x32 				|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x32 				|
 
 
 | Layer 2        		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 15x15x32 GrayScaled image   							| 
-| Convolution 5x5     	| 2x2 stride, same padding	|
+| Input         		| 14x14x32 GrayScaled image   							| 
+| Convolution 5x5     	| 1x1 stride, VALID padding	| output 10X10X64
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 5x5x128 				|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x64 				|
 
 
 | Layer 2_a         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 5x5x128  							| 
-| Convolution 5x5     	| 1x1 stride, same padding 	|
-| RELU					|		output 512										|
+| Input         		| 5x5x64  							| 
+| Convolution 5x5     	| 1x1 stride, VALID padding 	| output 400
+| RELU					|		output 400										|
 
 | Layer 3         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 512  							| 
+| Input         		| 400  							| 
 | Fully Connected     	| 	|
-| RELU					|				output 256								|
+| RELU					|				output 200								|
 
 | Layer 4         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 256  							| 
+| Input         		| 200  							| 
 | Fully Connected     	|  	|
-| RELU					|				output 128								|
+| RELU					|				output 100								|
 
 | Layer 5         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 128   							| 
+| Input         		| 100   							| 
 | Fully Connected     	|  	|
 | RELU					|				output 43
 
