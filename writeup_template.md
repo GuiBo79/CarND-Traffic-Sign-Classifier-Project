@@ -248,7 +248,8 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the valid set 96.4%
 
-###Image 1 - STOP
+Image 1 - STOP
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.00         			| Stop   									| 
@@ -257,7 +258,8 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 | 0.00      			| Road work					 				|
 | 0.00				    | Turn left ahead      							|
 
-###Image 2 - Yield
+Image 2 - Yield
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.99         			| Yield 									| 
