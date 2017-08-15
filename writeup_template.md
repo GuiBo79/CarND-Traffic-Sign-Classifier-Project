@@ -34,6 +34,7 @@ The goals / steps of this project are the following:
 [image6]: ./img3.png "Traffic Sign 3"
 [image7]: ./img4.png "Traffic Sign 4"
 [image8]: ./img5.png "Traffic Sign 5"
+[image9]: ./performancegraph.png "Performance Graph"
 
 # Rubric Points 
 
@@ -205,9 +206,13 @@ Each test was followed by an evalutation of the NetWotk accuracy related to the 
 
 Final Model Accuracy:
 
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 100%
+* validation set accuracy of 96.4%
+* test set accuracy of 94.4% 
+
+![alt text][image9]
+
+
 
 ## 7.Test on New Images
 
@@ -218,7 +223,7 @@ All the images were downloaded from internet and ajusted to 32 X 32 whith ShotWe
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-y_final_labels=np.array([4,32,40,36,35])
+y_final_labels=np.array([14,13,40,36,35])
 
 14.Stop
 
@@ -243,19 +248,23 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the valid set 96.4%
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
-
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
+###Image 1 - STOP
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 1.00         			| Stop   									| 
+| 0.00     				| Keep left										|
+| 0.00					| Turn right ahead										|
+| 0.00      			| Road work					 				|
+| 0.00				    | Turn left ahead      							|
+
+###Image 2 - Yield
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.99         			| Yield 									| 
+| 0.01     				| 	Ahead only									|
+| 0.00					| 		Speed limit (60km/h)							|
+| 0.00	      			| 	Speed limit (20km/h)				 				|
+| 0.00				    |   Speed limit (30km/h)  							|
 
 
 For the second image ... 
