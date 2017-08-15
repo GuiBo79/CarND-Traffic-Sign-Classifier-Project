@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./datasethist.png "DataSet Distribution"
 [image2]: ./index.png "Original DataSet"
-[image3]: ./processed.png "Grayscaled and Normalized DataSet"
+[image3]: ./preprocessed.png "Grayscaled and Normalized DataSet"
 [image4]: ./img1.png "Traffic Sign 1"
 [image5]: ./img2.png "Traffic Sign 2"
 [image6]: ./img3.png "Traffic Sign 3"
