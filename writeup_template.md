@@ -262,14 +262,42 @@ Image 2 - Yield
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 0.99         			| Yield 									| 
-| 0.01     				| 	Ahead only									|
+| 1.00         			| Yield 									| 
+| 0.00     				| 	Ahead only									|
 | 0.00					| 		Speed limit (60km/h)							|
 | 0.00	      			| 	Speed limit (20km/h)				 				|
 | 0.00				    |   Speed limit (30km/h)  							|
 
+Image 3 - Roundabout mandatory
 
-For the second image ... 
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.99         			| Roundabout mandatory									| 
+| 0.01     				| 	Priority road									|
+| 0.00					| 		Speed limit (100km/h)							|
+| 0.00	      			| 	Speed limit (80km/h)				 				|
+| 0.00				    |   Speed limit (50km/h)  							|
+
+Image 4 - Go straight or right
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.99         			| Go straight or right									| 
+| 0.01     				| 		Turn right ahead						|
+| 0.00					| 			Traffic signals						|
+| 0.00	      			| 	Ahead only				 				|
+| 0.00				    |   Right-of-way at the next intersection 							|
+
+Image 5 - Ahead only
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Ahead only									| 
+| 0.00     				| 		Priority road						|
+| 0.00					| 			Go straight or right					|
+| 0.00	      			| 	No passing				 				|
+| 0.00				    |   Turn left ahead							|
+
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
