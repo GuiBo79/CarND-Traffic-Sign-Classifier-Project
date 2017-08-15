@@ -96,8 +96,6 @@ To pre-process the DataSet, the first step was to grayscale using cv2.cvtColor f
 
 ![alt text][image3]
 
-The difference between the original data set and the augmented data set is the following ... 
-
 
 ## 5. Model Architeture 
 
