@@ -213,6 +213,15 @@ All the images were downloaded from internet and ajusted to 32 X 32 whith ShotWe
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
+y_final_labels=np.array([4,32,40,36,35])
+
+4.Speed limit (70km/h)
+32.End of all speed and passing limits
+40.Roundabout mandatory
+36.Go straight or right
+35.Ahead only
+
+
 The first image might be difficult to classify because ...
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
