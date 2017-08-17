@@ -219,7 +219,7 @@ Final Model Accuracy:
 
 ## 7.Test on New Images
 
-All the images were downloaded from internet and ajusted to 32 X 32 whith ShotWell
+All the images were downloaded from internet and ajusted to 32 X 32 whith ShotWell just using the CRÔP tool, no further treatment was done. Was already expected that differences in constrast and brightness could make more difficult to predict the correct sign. Fortunately for the downloaded images the predictions were 100% correct, probably due the good quality of the images. 
 
 
 
