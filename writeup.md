@@ -35,16 +35,17 @@ The goals / steps of this project are the following:
 [image7]: ./img4.png "Traffic Sign 4"
 [image8]: ./img5.png "Traffic Sign 5"
 [image9]: ./performancegraph.png "Performance Graph"
+[image10]: ./featuresmap.png "Features Map"
 
 # Rubric Points 
 
 ## 1.Required files: 
 
-  For this project will be submmited The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, this Report  in MD format , as well a link to GitHub where will be included all files related to the project.
+  For this project will be submitted The Traffic_Sign_Classifier.ipynb notebook file with all questions answered and all code          cells executed and displaying output, a HTML file with th jupyter notebook code, 5 images downloaded from internet in 32X32 format used as external samples, this Report  in MD format , as well a link to GitHub where will be included all files related to the project.
   
 ## 2.DataSet summarizing: 
 
- To sumarize the data was used Numpy library, with the folowing results for each aspect of the data set.
+ To summarize the data was used Numpy library, with the following results for each aspect of the data set.
  * The size of training set is ?
    n_train = len(X_train)
  * The size of the validation set is ?
@@ -92,15 +93,15 @@ Below the Bar Graphics, was plotted the first sample of each label without any p
 
 ## 4.Design and Test a Model Architecture
 
-To pre-process the DataSet, the first step was to grayscale using cv2.cvtColor function followed by a normalization. For the model I got better result just divinding the image array by 255 than using (x-128)/128 technique. I tried others tools as cv2.normalize , but as before mentioned, no improvement was verifyed. 
+To pre-process the DataSet, the first step was to grayscale using cv2.cvtColor function followed by a normalization. For the model I got better result just dividing the image array by 255 than using (x-128)/128 technique. I tried others tools as cv2.normalize , but as before mentioned, no improvement was verifyed. 
 
-The Validation dataset was augmented just concatenating the dataset itself, followed by a code (enhance_fig funtion) who randomly rotate and modify the sharpness of all dataset.
+The Validation dataset was augmented just concatenating the dataset itself, followed by a code (enhance_fig function) who randomly rotate and modify the sharpness of all dataset.
 
 
 ![alt text][image3]
 
 
-## 5. Model Architeture 
+## 5. Model Architecture 
 
 Structure of Weights, Biases and HyperParameters
 
@@ -193,17 +194,17 @@ The model was trained using these hyperparamter:
   Learning Rate=0.00097
   EPOCHS=30
   Batch=156
-In the beggining I was just doing trial and error to understand how the hyperparameters, as well the architeture and depth of the NetWork were influencing  the performance. The whole time I was looking for a simple code, focused in the NetWork problem. 
-Since the beggining was clear for me how import is the pre-processing . After lots of changes in the NetWork, a simple change in the normalization technique made my code jumps from 0.70 accuracy to 0.90. 
+In the begining I was just doing trial and error to understand how the hyperparameters, as well the architeture and depth of the NetWork were influencing  the performance. The whole time I was looking for a simple code, focused in the NetWork problem. 
+Since the begining was clear for me how import is the pre-processing . After lots of changes in the NetWork, a simple change in the normalization technique made my code jumps from 0.70 accuracy to 0.90. 
 
-The first architeture was a Vanilla LetNet. Rest very clear for me how good LeNet can handle with image, but to fit it exatcly to the problem is the challenge. 
+The first architecture was a Vanilla LetNet. Rest very clear for me how good LeNet can handle with image, but to fit it exatcly to the problem is the challenge. 
 
 Changes and Experiences with LeNet
-  Use of Dropout to prevent overfitting: Doesn't make any difference out of a slower code. 
+  Use of Dropout to prevent over-fitting: Doesn't make any difference out of a slower code. 
   Inclusion of an intermediate Conv layer called Layer 2_a to increase the depth of the NetWork: This change improve the accuracy in about 5%
   
   
-Each test was followed by an evalutation of the NetWotk accuracy related to the three DataSet, always looking for a convergency of the result. Due the difference between the datasets was already expected differents accuracies, but is very interesting how the behavior of the network can change, with a same setup one dataset can converge while another diverge the accuracy.
+Each test was followed by an evaluation of the NetWotk accuracy related to the three DataSet, always looking for a convergence of the result. Due the difference between the datasets was already expected different accuracies, but is very interesting how the behavior of the network can change, with a same setup one dataset can converge while another diverge the accuracy.
 
 
 Final Model Accuracy:
@@ -301,7 +302,11 @@ Image 5 - Ahead only
 | 0.00				    |   Turn left ahead							|
 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+## 8. Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
+
+Third Layer Visualization:
+The features MAP show us how the network classify the signs. Each feature information is compared with the image , and after calculate de SoftMax function the prediction is done in base of the probabilities.
+
+![alt text][image10]
 
 
