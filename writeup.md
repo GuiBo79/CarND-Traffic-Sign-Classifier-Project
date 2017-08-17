@@ -36,6 +36,11 @@ The goals / steps of this project are the following:
 [image8]: ./img5.png "Traffic Sign 5"
 [image9]: ./performancegraph.png "Performance Graph"
 [image10]: ./featuresmap.png "Features Map"
+[image11]: ./predict1.png "Prediction"
+[image12]: ./predict2.png "Prediction"
+[image13]: ./predict3.png "Prediction"
+[image14]: ./predict4.png "Prediction"
+[image15]: ./predict5.png "Prediction"
 
 # Rubric Points 
 
@@ -261,6 +266,8 @@ Image 1 - STOP
 | 0.00      			| Road work					 				|
 | 0.00				    | Turn left ahead      							|
 
+![alt text][image11]
+
 Image 2 - Yield
 
 | Probability         	|     Prediction	        					| 
@@ -270,6 +277,8 @@ Image 2 - Yield
 | 0.00					| 		Speed limit (60km/h)							|
 | 0.00	      			| 	Speed limit (20km/h)				 				|
 | 0.00				    |   Speed limit (30km/h)  							|
+
+![alt text][image12]
 
 Image 3 - Roundabout mandatory
 
@@ -281,6 +290,8 @@ Image 3 - Roundabout mandatory
 | 0.00	      			| 	Speed limit (80km/h)				 				|
 | 0.00				    |   Speed limit (50km/h)  							|
 
+![alt text][image13]
+
 Image 4 - Go straight or right
 
 | Probability         	|     Prediction	        					| 
@@ -291,6 +302,8 @@ Image 4 - Go straight or right
 | 0.00	      			| 	Ahead only				 				|
 | 0.00				    |   Right-of-way at the next intersection 							|
 
+![alt text][image14]
+
 Image 5 - Ahead only
 
 | Probability         	|     Prediction	        					| 
@@ -300,6 +313,8 @@ Image 5 - Ahead only
 | 0.00					| 			Go straight or right					|
 | 0.00	      			| 	No passing				 				|
 | 0.00				    |   Turn left ahead							|
+
+![alt text][image15]
 
 
 ## 8. Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
