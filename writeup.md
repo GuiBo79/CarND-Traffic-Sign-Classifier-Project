@@ -210,8 +210,8 @@ Each test was followed by an evaluation of the NetWotk accuracy related to the t
 Final Model Accuracy:
 
 * training set accuracy of 100%
-* validation set accuracy of 96.4%
-* test set accuracy of 94.4% 
+* validation set accuracy of 95.9%
+* test set accuracy of 94.2% 
 
 ![alt text][image9]
 
