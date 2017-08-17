@@ -320,7 +320,7 @@ Image 5 - Ahead only
 ## 8. Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 
 Third Layer Visualization:
-The features MAP show us how the network classify the signs. Each feature information is compared with the image , and after calculate de SoftMax function the prediction is done in base of the probabilities.
+The features MAP show us how the network classify the signs. Each feature information is compared with the image , and after calculate de SoftMax function the prediction is done in base of the probabilities .
 
 ![alt text][image10]
 
